@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Precious' website" />
+    <meta name="author" content="Precious" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precious' Personal website</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+      }
+      th {
+        text-align: left;
+      }
+      .form-section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="https://www.crazygames.com" target="_blank"
+          >My favorite website</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>This is my Website</h2>
+        <p>Welcome to my website!</p>
+        <!--External image-->
+        <img
+          src="https://images.pexels.com/photos/803766/pexels-photo-803766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Siberian Husky"
+        />
+      </section>
+      <section>
+        <!--An ordered list with roman numerals-->
+        <ol type="i">
+          <li>grapes</li>
+          <li>oranges</li>
+          <li>pineapples</li>
+        </ol>
+      </section>
+      <section>
+        <!--a table-->
+        <table>
+          <caption>
+            Contact Information of Registered Users
+          </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>47438 Madrid</td>
+              <td>0746570023</td>
+              <td>jdoe12@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Maria Gisel</td>
+              <td>32109 Tokyo</td>
+              <td>0749530011</td>
+              <td>mariagisel5@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Emmanuel Cooper</td>
+              <td>45607 New York</td>
+              <td>0738402110</td>
+              <td>emmanuellc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Ana Odom</td>
+              <td>45023 Lagos</td>
+              <td>0194589664</td>
+              <td>anaodom15@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Caroline Wanja</td>
+              <td>30021 Nairobi</td>
+              <td>0783942001</td>
+              <td>carowanja@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <br />
+    <!--Registration Form-->
+    <form action="" method="POST">
+      <fieldset>
+        <legend><strong>Contact information Registration:</strong></legend>
+        <!--User's name-->
+        <div class="form-section">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+            pattern="^[A-Za-zÀ-ÿ' -]+ [A-Za-zÀ-ÿ' -]+$"
+            title="firstname lastname"
+            autocomplete="name"
+          />
+        </div>
+
+        <!--User's email-->
+        <div class="form-section">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <!--User's password-->
+        <div class="form-section">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            maxlength="20"
+            placeholder="Create a secure password"
+            required
+            aria-describedby="passwordHelp"
+          />
+          <small id="passwordHelp"
+            >Your password must be atleast 8 characters long and include a mix
+            of letters, numbers, and symbols.</small
+          >
+        </div>
+
+        <!--User's date of birth-->
+        <div class="form-section">
+          <label for="dob">Date of birth:</label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+
+        <!--Drop-down for gender-->
+        <div class="form-section">
+          <label for="gender">Gender:</label>
+          <select name="gender" id="gender">
+            <option value="" disabled>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <label for="phone">Phone number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="^07\d{8}$"
+            placeholder="e.g., 0712-345-678"
+          />
+          <small>Format: 0712-3345-678</small>
+        </div>
+
+        <!--Radio buttons and checkboxes for subscription options-->
+        <div class="form-section">
+          <label for="subscribe"
+            ><em>Would you like to subscribe to our newsletter?</em></label
+          >
+          <div>
+            <input
+              type="radio"
+              id="yes"
+              name="newsletter"
+              value="yes"
+              required
+            />
+            <label for="yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="no" name="newsletter" value="no" />
+            <label for="no">No</label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" name="subscriptions" value="daily" /> Daily
+              Newsletter
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" name="subscriptions" value="weekly" />
+              Weekly Newsletter
+            </label>
+          </div>
+        </div>
+        <button type="submit">Register</button>
+      </fieldset>
+    </form>
+    <footer id="main-footer" style="background-color: cadetblue">
+      <p>Copyright &copy; 2025, My website</p>
+    </footer>
+  </body>
+</html>
